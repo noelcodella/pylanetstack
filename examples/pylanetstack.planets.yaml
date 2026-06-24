@@ -1,0 +1,100 @@
+# PyLanetStack example: planets and small bright ROIs.
+#
+# Use with:
+#   pylanetstack run INPUT_DIR OUTPUT_DIR --config examples/pylanetstack.planets.yaml
+
+performance:
+  workers: 8
+
+crop:
+  crop_size: 250
+  output_mode: linear-rgb
+  white_balance: camera
+  recursive: false
+  save_raw_crop: false
+  compression: null
+  overwrite: false
+  skip_bad_raw: true
+  max_frames: null
+  video_frame_step: 1
+
+filtering:
+  keep_best_percent: 25
+  keep_best_frames: null
+  quality_weighting: true
+  quality_weight_scale: 1.5
+  quality_weight_min: 0.25
+  quality_weight_max: 4.0
+  reference: best
+
+alignment:
+  method: ap
+  upsample_factor: 20
+  update_reference_every: 0
+  registration_max_shift: 50
+  ap:
+    patch_size: 12
+    spacing: 6
+    blend_sigma: 18
+    max_points: 2500
+    min_mask_fraction: 0.25
+    min_contrast: 0.015
+  flow:
+    warps: 5
+    iterations: 10
+    attachment: 15.0
+    tightness: 0.3
+    smoothing_sigma: 0.1
+    max_pixels: 2
+
+channel_alignment:
+  enabled: true
+  reference: green
+  max_shift: 3
+  upsample_factor: 20
+
+postprocessing:
+  enabled: true
+  input_max: 65535
+  level_black: auto
+  level_white: auto
+  level_gamma: 1
+  exposure: 0.5
+  highlight_compression: 0.7
+  texture: 100
+  texture_radius: 2
+  dehaze: 100
+  dehaze_radius: 12
+  sharpening: 500
+  sharpening_radius: 0.8
+  wb_mode: auto
+  wb_strength: 1
+  red_balance: 1
+  green_balance: 1
+  blue_balance: 1
+  saturation: 3
+  vibrance: 1
+  background_black: true
+  background_dilate: 3
+  background_feather: 4
+  upsample: 4
+  upsample_smoothing: 1.0
+
+output:
+  dtype: uint16
+  stack_upsample: 1
+  preview: true
+  preview_low_percentile: 0.5
+  preview_high_percentile: 99.95
+  compression: null
+
+run:
+  overwrite: false
+  max_frames: null
+  crop_compression: null
+  stack_compression: null
+
+stack:
+  recursive: false
+  max_frames: null
+  compression: null
