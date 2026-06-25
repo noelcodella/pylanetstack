@@ -16,15 +16,16 @@ PyLanetStack is meant to make a complete lucky-imaging workflow repeatable
 from the command line or a YAML recipe, while still preserving linear
 scientific image data when you want to keep processing elsewhere.
 
-1. Finds the dominant bright target in every RAW file, image file, or decoded video frame.
-2. Saves centered fixed-size or automatically sized square crops as compact 16-bit TIFFs to reduce I/O before stacking.
-3. Ranks frames by high-frequency detail, supports best-frame selection, and can weight sharper frames more heavily in the final stack.
-4. Applies camera white balance by default so linear RGB crops do not skew green.
-5. Aligns each crop with local alignment points for planets, lunar regions, and solar regions.
-6. Optionally applies dense nonlinear TV-L1 optical flow for sub-pixel correction of local atmospheric distortion.
-7. Corrects atmospheric chromatic aberration/dispersion by aligning RGB color channels, which is especially useful for low-altitude planets.
-8. Supports stack-time upsampling for superresolution-style experiments from naturally shifted frames.
-9. Saves the best discovered single frame, leveled and processed best-frame comparisons, a linear scientific stack, display previews, processed TIFFs, copied YAML settings, and JSON metadata.
+1. Runs as a Python implementation on macOS, Windows, and Linux without being tied to one desktop platform.
+2. Finds the dominant bright target in every RAW file, image file, or decoded video frame.
+3. Saves centered fixed-size or automatically sized square crops as compact 16-bit TIFFs to reduce I/O before stacking.
+4. Ranks frames by high-frequency detail, supports best-frame selection, and can weight sharper frames more heavily in the final stack.
+5. Applies camera white balance by default so linear RGB crops do not skew green.
+6. Aligns each crop with local alignment points for planets, lunar regions, and solar regions.
+7. Optionally applies dense nonlinear TV-L1 optical flow for sub-pixel correction of local atmospheric distortion.
+8. Corrects atmospheric chromatic aberration/dispersion by aligning RGB color channels, which is especially useful for low-altitude planets.
+9. Supports stack-time upsampling for superresolution-style experiments from naturally shifted frames.
+10. Saves the best discovered single frame, leveled and processed best-frame comparisons, a linear scientific stack, display previews, processed TIFFs, copied YAML settings, and JSON metadata.
 
 ## Example Results
 
