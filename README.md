@@ -747,3 +747,7 @@ python -m pytest
 ```
 
 The tests use synthetic planetary frames so they do not require camera files.
+
+## Development Note
+
+This repository was developed with assistance from OpenAI Codex.
