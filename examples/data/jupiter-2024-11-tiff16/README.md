@@ -5,8 +5,17 @@ crops for quick experiments with PyLanetStack.
 
 The original captures were made with a standard consumer-grade, general-purpose
 camera rather than astrophotography-specific hardware such as a dedicated
-astronomy camera. More acquisition background is available in the project
-README.
+astronomy camera. Capture setup details and a broader walkthrough are available
+in the [Astrophotography Introduction tutorial PDF](https://noelcodella.github.io/publicwebsite/assets/docs/astro-intro.pdf).
+
+Capture parameters from the original ARW files used for this example:
+
+| Camera | Telescope | ISO | Shutter Time(s) |
+| --- | --- | --- | --- |
+| Sony Alpha 7R IIIA (`ILCE-7RM3A`) | Celestron NexStar 8SE | 100 | `1/100` (98 frames), `1/125` (84 frames), `1/60` (33 frames), `1/80` (16 frames) |
+
+The telescope is a manual optical path, so normal EXIF lens and f-number fields
+are not reported by the camera.
 
 Each frame is a 281 x 281 crop centered on Jupiter. The crops are stored as
 scientific linear 16-bit RGB TIFFs with the original low signal range preserved
